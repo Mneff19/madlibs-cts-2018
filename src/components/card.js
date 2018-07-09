@@ -37,6 +37,7 @@ class Card extends Component {
   handleInputChange(event) {
     {/* console.log('Changed!', event.target.value);*/}
     this.setState({ [event.target.name]:event.target.value})
+    console.log("I did something");
   }
 
   handleFormSubmit(event){
@@ -77,7 +78,7 @@ class Card extends Component {
         <div className="card_inputs">
         {
           inputData.map((data, index) =>{
-              return Input((data), this.handelInputChange, index)
+              return Input((data), this.handleInputChange, index)
           })
         }
         </div>
